@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Hommage à mon grand-père — Hod Fragonard
+  </title>
+
+  <link rel="stylesheet"
+        href="assets/css/main.css">
+
+
+  <style>
+
+    /* =========================================
+       PAGE DU LIVRE
+    ========================================= */
+
+    .book-page {
+      padding-top: 45px;
+      padding-bottom: 100px;
+    }
+
+
+    .book-detail {
+
+      display: grid;
+
+      grid-template-columns:
+        0.95fr 1.05fr;
+
+      gap: 70px;
+
+      align-items: start;
+
+    }
+
+
+    /* =========================================
+       ZONE COUVERTURE
+    ========================================= */
+
+    .book-visual {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: flex-start;
+
+      position: relative;
+
+      padding-top: 5px;
+
+    }
+
+
+    /* Cercle décoratif */
+
+    .book-visual::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 390px;
+      height: 390px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(201, 162, 39, 0.07);
+
+      top: 35px;
+
+      left: 50%;
+
+      transform:
+        translateX(-50%);
+
+      z-index: 0;
+
+    }
+
+
+    /* Conteneur couverture */
+
+    .book-cover-large {
+
+      position: relative;
+
+      z-index: 1;
+
+      width: 100%;
+
+      display: flex;
+
+      justify-content: center;
+
+      transform:
+        translateY(-35px);
+
+    }
+
+
+    /* Image */
+
+    .book-cover-large img {
+
+      width: 92%;
+
+      max-width: 490px;
+
+      height: auto;
+
+      display: block;
+
+      object-fit: contain;
+
+      border-radius:
+        5px 11px 11px 5px;
+
+      box-shadow:
+
+        0 22px 55px
+        rgba(0, 0, 0, 0.20),
+
+        9px 10px 0
+        rgba(201, 162, 39, 0.10);
+
+      transition:
+
+        transform 0.4s ease,
+
+        box-shadow 0.4s ease;
+
+    }
+
+
+    .book-cover-large img:hover {
+
+      transform:
+        translateY(-7px);
+
+      box-shadow:
+
+        0 30px 65px
+        rgba(0, 0, 0, 0.24),
+
+        11px 12px 0
+        rgba(201, 162, 39, 0.16);
+
+    }
+
+
+    /* =========================================
+       CONTENU DU LIVRE
+    ========================================= */
+
+    .book-content {
+
+      max-width: 590px;
+
+      padding-top: 5px;
+
+    }
+
+
+    .book-badge {
+
+      display: inline-block;
+
+      padding:
+        7px 13px;
+
+      margin-bottom: 17px;
+
+      border:
+        1px solid
+        rgba(176, 138, 24, 0.45);
+
+      color: #a77f16;
+
+      font-size: 0.72rem;
+
+      letter-spacing:
+        0.17em;
+
+      text-transform:
+        uppercase;
+
+      font-weight: 600;
+
+    }
+
+
+    .book-content h1 {
+
+      font-size:
+        clamp(2.3rem, 4.5vw, 4rem);
+
+      line-height: 1.05;
+
+      margin:
+        0 0 16px;
+
+    }
+
+
+    .book-subtitle-large {
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        1.25rem;
+
+      line-height:
+        1.65;
+
+      font-style:
+        italic;
+
+      color: #555;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .book-gold-line {
+
+      width: 58px;
+
+      height: 3px;
+
+      background: #c9a227;
+
+      margin:
+        20px 0 28px;
+
+    }
+
+
+    /* =========================================
+       PRÉSENTATION
+    ========================================= */
+
+    .book-intro {
+
+      font-size:
+        1rem;
+
+      line-height:
+        1.85;
+
+      margin-bottom: 17px;
+
+    }
+
+
+    /* =========================================
+       FICHE TECHNIQUE
+    ========================================= */
+
+    .book-details {
+
+      margin:
+        28px 0;
+
+      padding:
+        18px 22px;
+
+      background:
+        rgba(0, 0, 0, 0.025);
+
+      border-left:
+        3px solid #c9a227;
+
+    }
+
+
+    .book-detail-row {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      gap: 25px;
+
+      padding: 8px 0;
+
+      border-bottom:
+        1px solid
+        rgba(0, 0, 0, 0.055);
+
+      font-size:
+        0.92rem;
+
+      line-height:
+        1.5;
+
+    }
+
+
+    .book-detail-row:last-child {
+
+      border-bottom:
+        none;
+
+    }
+
+
+    .book-detail-row strong {
+
+      font-weight: 600;
+
+      white-space:
+        nowrap;
+
+    }
+
+
+    .book-detail-row span {
+
+      text-align:
+        right;
+
+      color: #555;
+
+    }
+
+
+    /* =========================================
+       AMAZON
+    ========================================= */
+
+    .amazon-box {
+
+      margin-top: 25px;
+
+      padding:
+        23px 25px;
+
+      background:
+        #0b1f33;
+
+      color: #fff;
+
+      border-radius: 5px;
+
+      box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.10);
+
+    }
+
+
+    .amazon-box h3 {
+
+      margin:
+        0 0 7px;
+
+      font-size:
+        1.15rem;
+
+    }
+
+
+    .amazon-box p {
+
+      margin:
+        0 0 17px;
+
+      font-size:
+        0.92rem;
+
+      line-height:
+        1.6;
+
+      opacity:
+        0.88;
+
+    }
+
+
+    .amazon-button {
+
+      display: inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap: 9px;
+
+      padding:
+        12px 22px;
+
+      background:
+        #c9a227;
+
+      color:
+        #fff;
+
+      text-decoration:
+        none;
+
+      font-size:
+        0.92rem;
+
+      font-weight:
+        600;
+
+      border-radius:
+        3px;
+
+      transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+
+    }
+
+
+    .amazon-button:hover {
+
+      background:
+        #ad881e;
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    /* =========================================
+       CITATION
+    ========================================= */
+
+    .book-quote {
+
+      margin-top:
+        28px;
+
+      padding:
+        3px 0 3px 18px;
+
+      border-left:
+        2px solid #c9a227;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        1.08rem;
+
+      line-height:
+        1.7;
+
+      font-style:
+        italic;
+
+      color: #555;
+
+    }
+
+
+    /* =========================================
+       RETOUR
+    ========================================= */
+
+    .book-back {
+
+      display:
+        inline-block;
+
+      margin-top:
+        25px;
+
+      font-size:
+        0.9rem;
+
+      text-decoration:
+        none;
+
+      color:
+        #0b1f33;
+
+      transition:
+        opacity 0.3s ease;
+
+    }
+
+
+    .book-back:hover {
+
+      opacity:
+        0.65;
+
+    }
+
+
+    /* =========================================
+       TABLETTE
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .book-page {
+
+        padding-top:
+          35px;
+
+      }
+
+
+      .book-detail {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          30px;
+
+      }
+
+
+      .book-visual {
+
+        padding-top:
+          0;
+
+      }
+
+
+      .book-cover-large {
+
+        transform:
+          translateY(-15px);
+
+      }
+
+
+      .book-cover-large img {
+
+        width:
+          82%;
+
+        max-width:
+          430px;
+
+      }
+
+
+      .book-content {
+
+        max-width:
+          100%;
+
+        padding-top:
+          0;
+
+      }
+
+
+      .book-visual::before {
+
+        width:
+          320px;
+
+        height:
+          320px;
+
+      }
+
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 600px) {
+
+      .book-page {
+
+        padding-top:
+          25px;
+
+        padding-bottom:
+          70px;
+
+      }
+
+
+      .book-detail {
+
+        gap:
+          25px;
+
+      }
+
+
+      .book-cover-large {
+
+        transform:
+          translateY(-10px);
+
+      }
+
+
+      .book-cover-large img {
+
+        width:
+          88%;
+
+        max-width:
+          350px;
+
+      }
+
+
+      .book-visual::before {
+
+        width:
+          260px;
+
+        height:
+          260px;
+
+        top:
+          20px;
+
+      }
+
+
+      .book-content h1 {
+
+        font-size:
+          2.35rem;
+
+      }
+
+
+      .book-subtitle-large {
+
+        font-size:
+          1.1rem;
+
+      }
+
+
+      .book-detail-row {
+
+        flex-direction:
+          column;
+
+        gap:
+          2px;
+
+      }
+
+
+      .book-detail-row strong {
+
+        white-space:
+          normal;
+
+      }
+
+
+      .book-detail-row span {
+
+        text-align:
+          left;
+
+      }
+
+
+      .amazon-button {
+
+        width:
+          100%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================================
+       CURSEUR
+  ========================================= -->
+
+  <div id="cursor-dot"></div>
+
+  <div id="cursor-ring"></div>
+
+  <div id="cursor-label"></div>
+
+  <div id="page-transition"></div>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================= -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a
+        href="index.html"
+        class="logo"
+      >
+        HOD <span>FRAGONARD</span>
+      </a>
+
+
+      <nav class="nav-desktop">
+
+        <ul class="nav-links">
+
+          <li>
+            <a href="index.html">
+              Accueil
+            </a>
+          </li>
+
+
+          <li>
+            <a
+              href="ouvrages.html"
+              class="active"
+            >
+              Ouvrages
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       CONTENU
+  ========================================= -->
+
+  <main>
+
+    <section
+      class="book-page"
+      style="margin-top:var(--header-h)"
+    >
+
+      <div class="container">
+
+        <div class="book-detail">
+
+
+          <!-- =====================================
+               COUVERTURE
+          ====================================== -->
+
+          <div class="book-visual">
+
+            <div class="book-cover-large">
+
+              <img
+                src="assets/images/Hommage à mon grand-père.jpg"
+                alt="Hommage à mon grand-père — Hod Fragonard"
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- =====================================
+               INFORMATIONS
+          ====================================== -->
+
+          <div class="book-content">
+
+
+            <span class="book-badge">
+              Ouvrage · Témoignage
+            </span>
+
+
+            <h1>
+              Hommage à mon<br>
+              grand-père
+            </h1>
+
+
+            <p class="book-subtitle-large">
+              L'héritage d'un homme de valeurs
+            </p>
+
+
+            <div class="book-gold-line"></div>
+
+
+            <p class="book-intro">
+
+              <strong>
+                Un hommage à une figure familiale,
+                à ses valeurs et à l'héritage qu'elle
+                transmet aux générations suivantes.
+              </strong>
+
+            </p>
+
+
+            <p class="book-intro">
+
+              À travers cet ouvrage, Hod Fragonard
+              rend hommage à son grand-père et revient
+              sur les valeurs, les souvenirs et les
+              enseignements qui ont marqué son parcours.
+
+            </p>
+
+
+            <p class="book-intro">
+
+              Plus qu'un simple hommage familial,
+              ce livre met en lumière la transmission
+              des valeurs et l'importance de préserver
+              la mémoire de ceux qui nous ont précédés.
+
+            </p>
+
+
+            <p class="book-intro">
+
+              Une invitation à se souvenir, à transmettre
+              et à faire vivre un héritage fondé sur
+              les valeurs humaines.
+
+            </p>
+
+
+            <!-- =====================================
+                 INFORMATIONS
+            ====================================== -->
+
+            <div class="book-details">
+
+
+              <div class="book-detail-row">
+
+                <strong>
+                  Auteure
+                </strong>
+
+                <span>
+                  Hod Fragonard
+                </span>
+
+              </div>
+
+
+              <div class="book-detail-row">
+
+                <strong>
+                  Titre
+                </strong>
+
+                <span>
+                  Hommage à mon grand-père
+                </span>
+
+              </div>
+
+
+              <div class="book-detail-row">
+
+                <strong>
+                  Sous-titre
+                </strong>
+
+                <span>
+                  L'héritage d'un homme de valeurs
+                </span>
+
+              </div>
+
+
+              <div class="book-detail-row">
+
+                <strong>
+                  Genre
+                </strong>
+
+                <span>
+                  Témoignage · Hommage
+                </span>
+
+              </div>
+
+
+              <div class="book-detail-row">
+
+                <strong>
+                  Thématiques
+                </strong>
+
+                <span>
+                  Transmission · Famille · Mémoire · Valeurs
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <!-- =====================================
+                 AMAZON
+            ====================================== -->
+
+            <div class="amazon-box">
+
+              <h3>
+                Disponible sur Amazon
+              </h3>
+
+
+              <p>
+
+                Découvrez l'ouvrage et retrouvez
+                toutes les informations disponibles
+                pour vous procurer votre exemplaire.
+
+              </p>
+
+
+              <!--
+                REMPLACER LE # PAR LE LIEN AMAZON
+                DU LIVRE LORSQU'IL SERA DISPONIBLE.
+              -->
+
+              <a
+                href="#"
+                class="amazon-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="Acheter"
+              >
+
+                🛒 Acheter sur Amazon
+
+              </a>
+
+            </div>
+
+
+            <!-- =====================================
+                 CITATION
+            ====================================== -->
+
+            <p class="book-quote">
+
+              « Certains héritages ne se mesurent pas
+              en biens, mais en valeurs transmises
+              et en souvenirs qui demeurent. »
+
+            </p>
+
+
+            <!-- =====================================
+                 RETOUR
+            ====================================== -->
+
+            <a
+              href="ouvrages.html"
+              class="book-back"
+            >
+
+              ← Retour aux ouvrages
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       SCRIPTS
+  ========================================= -->
+
+  <script src="assets/js/cursor.js"></script>
+
+  <script src="assets/js/transitions.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
+```
+

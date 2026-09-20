@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ouvrages — Hod Fragonard</title>
+
+  <meta name="description" content="Découvrez tous les ouvrages de Hod Fragonard : Les 22 Mantras de la Résilience, Ton Carnet du Soir, Hommage à mon grand-père, Paroles de Paix pour la jeunesse.">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <style>
+    /* =========================================================
+       SECTION OUVRAGES — NOUVEAU STYLE
+       Les liens et images d'origine sont conservés
+    ========================================================= */
+
+    .books-section-modern {
+      background: #f7f3ea;
+    }
+
+    .books-grid-modern {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    /* =========================
+       CARTE
+    ========================= */
+
+    .book-card-modern {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      border: 1px solid rgba(11, 31, 51, 0.08);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(11, 31, 51, 0.06);
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .book-card-modern:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(11, 31, 51, 0.13);
+    }
+
+    /* =========================
+       ZONE COUVERTURE
+    ========================= */
+
+    .book-cover-modern {
+      position: relative;
+      height: 390px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 24px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #f8f5ed 0%,
+          #eee9dd 100%
+        );
+
+      overflow: hidden;
+    }
+
+    /* Décoration dorée */
+
+    .book-cover-modern::before {
+      content: "";
+      position: absolute;
+
+      width: 180px;
+      height: 180px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(201, 162, 39, 0.13);
+
+      top: -90px;
+      left: -90px;
+    }
+
+    .book-cover-modern::after {
+      content: "";
+      position: absolute;
+
+      width: 150px;
+      height: 150px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(201, 162, 39, 0.18);
+
+      right: -65px;
+      bottom: -65px;
+    }
+
+    /* =========================
+       IMAGE
+    ========================= */
+
+    .book-image-wrapper {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      height: 345px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .book-image-wrapper img {
+      display: block;
+
+      max-width: 100%;
+      max-height: 345px;
+
+      width: auto;
+      height: auto;
+
+      object-fit: contain;
+
+      border-radius: 4px 8px 8px 4px;
+
+      box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.18);
+
+      transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+    }
+
+    .book-card-modern:hover .book-image-wrapper img {
+      transform: scale(1.035) translateY(-4px);
+
+      box-shadow:
+        0 20px 35px rgba(0, 0, 0, 0.22);
+    }
+
+    /* =========================
+       CONTENU
+    ========================= */
+
+    .book-body-modern {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+
+      flex: 1;
+
+      padding: 23px 22px 22px;
+    }
+
+    /* Numéro */
+
+    .book-number {
+      display: block;
+
+      margin-bottom: 10px;
+
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+
+      color: #b08a1c;
+
+      font-weight: 700;
+    }
+
+    /* Titre */
+
+    .book-title-modern {
+      margin: 0 0 10px;
+
+      color: #0b1f33;
+
+      font-size: 1.25rem;
+      line-height: 1.25;
+
+      font-weight: 600;
+    }
+
+    /* Sous-titre */
+
+    .book-subtitle-modern {
+      margin: 0 0 23px;
+
+      color: #666;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-style: italic;
+
+      font-size: 0.94rem;
+      line-height: 1.6;
+
+      min-height: 48px;
+    }
+
+    /* =========================
+       BOUTON
+    ========================= */
+
+    .book-btn-modern {
+      margin-top: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 12px 14px;
+
+      border: 1px solid rgba(11, 31, 51, 0.14);
+
+      color: #0b1f33;
+
+      text-decoration: none;
+
+      font-size: 0.82rem;
+
+      font-weight: 600;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .book-btn-modern:hover {
+      background: #0b1f33;
+
+      color: #ffffff;
+
+      border-color: #0b1f33;
+    }
+
+    .book-arrow {
+      font-size: 1.1rem;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+    .book-btn-modern:hover .book-arrow {
+      transform: translateX(5px);
+    }
+
+    /* =========================================================
+       TABLETTE
+    ========================================================= */
+
+    @media (max-width: 1150px) {
+
+      .books-grid-modern {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+    }
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 650px) {
+
+      .books-grid-modern {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .book-cover-modern {
+        height: 410px;
+      }
+
+      .book-image-wrapper {
+        height: 370px;
+      }
+
+      .book-image-wrapper img {
+        max-height: 370px;
+      }
+
+      .book-body-modern {
+        padding: 22px 20px 20px;
+      }
+
+      .book-title-modern {
+        font-size: 1.2rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- =========================================================
+       CURSEUR
+  ========================================================= -->
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="cursor-label"></div>
+
+  <div id="page-transition"></div>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================= -->
+
+  <header class="site-header">
+
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">
+        HOD
+        <span>FRAGONARD</span>
+        <span class="logo-tag">Site Officiel</span>
+      </a>
+
+
+      <nav class="nav-desktop">
+
+        <ul class="nav-links">
+
+          <li>
+            <a href="index.html">
+              Accueil
+            </a>
+          </li>
+
+          <li>
+            <a href="a-propos.html">
+              À propos
+            </a>
+          </li>
+
+          <li>
+            <a href="juriste.html">
+              Juriste
+            </a>
+          </li>
+
+          <li>
+            <a href="autrice.html">
+              Autrice
+            </a>
+          </li>
+
+          <li>
+            <a href="ouvrages.html" class="active">
+              Ouvrages
+            </a>
+          </li>
+
+          <li>
+            <a href="projets.html">
+              Engagements
+            </a>
+          </li>
+
+          <li>
+            <a href="actualites.html">
+              Actualités
+            </a>
+          </li>
+
+          <li>
+            <a href="agenda.html">
+              Agenda
+            </a>
+          </li>
+
+          <li>
+            <a href="galerie.html">
+              Galerie
+            </a>
+          </li>
+
+        </ul>
+
+
+        <a
+          href="contact.html"
+          class="btn btn-or btn-sm"
+        >
+          Me contacter
+        </a>
+
+      </nav>
+
+
+      <!-- MENU MOBILE -->
+
+      <button
+        class="hamburger hamburger-btn"
+        aria-label="Ouvrir le menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       NAVIGATION MOBILE
+  ========================================================= -->
+
+  <nav class="nav-mobile mobile-nav">
+
+    <span class="nav-mobile-tagline">
+      Menu Principal
+    </span>
+
+
+    <ul class="nav-mobile-links">
+
+      <li>
+        <a href="index.html">
+          Accueil
+        </a>
+      </li>
+
+      <li>
+        <a href="a-propos.html">
+          À propos
+        </a>
+      </li>
+
+      <li>
+        <a href="juriste.html">
+          Juriste
+        </a>
+      </li>
+
+      <li>
+        <a href="autrice.html">
+          Autrice
+        </a>
+      </li>
+
+      <li>
+        <a href="ouvrages.html">
+          Ouvrages
+        </a>
+      </li>
+
+      <li>
+        <a href="projets.html">
+          Engagements
+        </a>
+      </li>
+
+      <li>
+        <a href="ambassadrice.html">
+          Ambassadrice
+        </a>
+      </li>
+
+      <li>
+        <a href="agenda.html">
+          Agenda
+        </a>
+      </li>
+
+      <li>
+        <a href="galerie.html">
+          Galerie
+        </a>
+      </li>
+
+    </ul>
+
+
+    <a
+      href="contact.html"
+      class="btn btn-or"
+    >
+      Me contacter
+    </a>
+
+  </nav>
+
+
+  <!-- =========================================================
+       CONTENU PRINCIPAL
+  ========================================================= -->
+
+  <main>
+
+
+    <!-- =======================================================
+         HERO
+    ======================================================= -->
+
+    <section class="page-hero page-hero-dark">
+
+      <div class="page-hero-bg-deco"></div>
+
+      <div
+        class="container page-hero-content text-center max-900 reveal-up"
+      >
+
+        <span class="eyebrow">
+          Bibliographie
+        </span>
+
+        <h1 class="text-white">
+          Tous les ouvrages
+        </h1>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         OUVRAGES
+    ======================================================= -->
+
+    <section class="section bg-ivory books-section-modern">
+
+      <div class="container">
+
+
+        <div class="books-grid books-grid-modern">
+
+
+          <!-- =================================================
+               LIVRE 1
+          ================================================= -->
+
+          <article class="book-card-modern reveal-up s1">
+
+            <div class="book-cover-modern">
+
+              <div class="book-image-wrapper">
+
+                <img
+                  src="assets/images/livre-mantras.jpg"
+                  alt="Les 22 Mantras de la Résilience"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="book-body-modern">
+
+              <span class="book-number">
+                01
+              </span>
+
+
+              <h3 class="book-title-modern">
+                Les 22 Mantras de la Résilience
+              </h3>
+
+
+              <p class="book-subtitle-modern">
+                22 Mantras pour tenir bon et rebondir plus fort
+              </p>
+
+
+              <a
+                href="livre-mantras.html"
+                class="book-btn-modern"
+                data-cursor="Ouvrir"
+              >
+
+                <span>
+                  Découvrir l'ouvrage
+                </span>
+
+                <span class="book-arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- =================================================
+               LIVRE 2
+          ================================================= -->
+
+          <article class="book-card-modern reveal-up s2">
+
+            <div class="book-cover-modern">
+
+              <div class="book-image-wrapper">
+
+                <img
+                  src="assets/images/Ton Carnet du Soir.jpg"
+                  alt="Ton Carnet du Soir"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="book-body-modern">
+
+              <span class="book-number">
+                02
+              </span>
+
+
+              <h3 class="book-title-modern">
+                Ton Carnet du Soir
+              </h3>
+
+
+              <p class="book-subtitle-modern">
+                22 Mantras pour s'apaiser avant de dormir
+              </p>
+
+
+              <a
+                href="livre-carnet.html"
+                class="book-btn-modern"
+                data-cursor="Ouvrir"
+              >
+
+                <span>
+                  Découvrir l'ouvrage
+                </span>
+
+                <span class="book-arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- =================================================
+               LIVRE 3
+          ================================================= -->
+
+          <article class="book-card-modern reveal-up s3">
+
+            <div class="book-cover-modern">
+
+              <div class="book-image-wrapper">
+
+                <img
+                  src="assets/images/Hommage à mon grand-père.jpg"
+                  alt="Hommage à mon grand-père"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="book-body-modern">
+
+              <span class="book-number">
+                03
+              </span>
+
+
+              <h3 class="book-title-modern">
+                Hommage à mon grand-père
+              </h3>
+
+
+              <p class="book-subtitle-modern">
+                L'héritage d'un homme de valeurs
+              </p>
+
+
+              <a
+                href="livre-grand-pere.html"
+                class="book-btn-modern"
+                data-cursor="Ouvrir"
+              >
+
+                <span>
+                  Découvrir l'ouvrage
+                </span>
+
+                <span class="book-arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- =================================================
+               LIVRE 4
+          ================================================= -->
+
+          <article class="book-card-modern reveal-up s4">
+
+            <div class="book-cover-modern">
+
+              <div class="book-image-wrapper">
+
+                <img
+                  src="assets/images/livre-paix.jpg"
+                  alt="Paroles de Paix pour la jeunesse"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="book-body-modern">
+
+              <span class="book-number">
+                04
+              </span>
+
+
+              <h3 class="book-title-modern">
+                Paroles de Paix pour la jeunesse
+              </h3>
+
+
+              <p
+                class="book-subtitle-modern"
+                style="visibility:hidden"
+              >
+                Pas de sous-titre
+              </p>
+
+
+              <a
+                href="livre-paix-jeunesse.html"
+                class="book-btn-modern"
+                data-cursor="Ouvrir"
+              >
+
+                <span>
+                  Découvrir l'ouvrage
+                </span>
+
+                <span class="book-arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <h2>
+            HOD FRAGONARD
+          </h2>
+
+          <span class="footer-tagline">
+            Juriste • Autrice • Entrepreneure • Ambassadrice de Paix
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; 2026 Hod Fragonard.
+        </p>
+
+
+        <div class="footer-legal">
+
+          <a href="mentions-legales.html">
+            Mentions légales
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       WHATSAPP
+  ========================================================= -->
+
+  <a
+    href="https://wa.me/33646176485"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      fill="currentColor"
+    >
+
+      <path d="M16 2a13 13 0 0 0-11 20l-2 7 7-2a13 13 0 1 0 6-25zm0 24c-2 0-4-1-6-2l-1-1-4 1 1-4-1-1a11 11 0 1 1 11 7zm6-9c0 2-2 3-3 4l-1 1c-1 0-2 0-4-1-3-2-5-4-5-7 0-1 1-2 2-3h1l1 2 1 2-1 1c0 1 1 2 3 3l1-1 2-1 1 2v1z"/>
+
+    </svg>
+
+  </a>
+
+
+
+  <!-- =========================================================
+       RETOUR EN HAUT
+  ========================================================= -->
+
+  <button
+    class="back-top"
+    aria-label="Retour en haut"
+  >
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+
+      <polyline points="18 15 12 9 6 15"></polyline>
+
+    </svg>
+
+  </button>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================= -->
+
+  <script src="assets/js/cursor.js"></script>
+
+  <script src="assets/js/transitions.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Titre du Livre] — Hod Fragonard</title>
+    <meta name="description" content="Découvrez [Titre du Livre] par Hod Fragonard.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Hod Fragonard</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="juriste.html">Juriste</a></li>
+                    <li><a href="autrice.html" class="active">Autrice</a></li>
+                    <li><a href="projets.html">Engagements</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-gold">Me contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section style="padding: 150px 0 50px; background-color: var(--color-background);">
+            <div class="container">
+                <div class="breadcrumb" style="font-size: var(--text-sm); margin-bottom: var(--space-8); color: var(--color-primary);">
+                    <a href="index.html">Accueil</a> <span style="margin: 0 10px;">/</span> <a href="autrice.html">Autrice</a> <span style="margin: 0 10px;">/</span> [Titre du Livre]
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-8); align-items: start;">
+                    @media(min-width: 768px) {
+                        div[style*="grid-template-columns"] {
+                            grid-template-columns: 4fr 8fr;
+                        }
+                    }
+                    
+                    <!-- Couverture -->
+                    <div class="book-cover slide-up" style="background-color: #20252B; height: 500px; display: flex; align-items: center; justify-content: center; color: var(--color-white); box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                        [COUVERTURE DU LIVRE]
+                    </div>
+                    
+                    <!-- Infos Livre -->
+                    <div class="book-info fade-in">
+                        <h1 style="font-size: var(--text-4xl); margin-bottom: var(--space-2);">[Titre du Livre]</h1>
+                        <p style="font-family: var(--font-heading); font-size: var(--text-xl); color: rgba(32,37,43,0.7); margin-bottom: var(--space-6); font-style: italic;">
+                            [Sous-titre éventuel]
+                        </p>
+                        
+                        <div style="margin-bottom: var(--space-8);">
+                            <a href="#" class="btn btn-primary" style="margin-right: var(--space-4);">Acheter le livre</a>
+                            <a href="#extrait" class="btn btn-outline">Lire un extrait</a>
+                        </div>
+                        
+                        <div style="padding: var(--space-6); background-color: var(--color-white); border: 1px solid rgba(11,31,51,0.05); margin-bottom: var(--space-8);">
+                            <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-4);">Détails de l'ouvrage</h3>
+                            <ul style="font-size: var(--text-sm); color: rgba(32,37,43,0.8); line-height: 2;">
+                                <li><strong>Date de parution :</strong> [Date]</li>
+                                <li><strong>Éditeur :</strong> [Maison d'édition]</li>
+                                <li><strong>Nombre de pages :</strong> [Nombre] pages</li>
+                                <li><strong>ISBN :</strong> [Numéro ISBN]</li>
+                            </ul>
+                        </div>
+                        
+                        <h3 style="font-size: var(--text-2xl); margin-bottom: var(--space-4);">Présentation</h3>
+                        <div style="color: rgba(32,37,43,0.8); line-height: 1.8;">
+                            <p>[Résumé complet du livre à fournir par la cliente. Ce texte doit présenter les thèmes abordés, l'intrigue ou le sujet de l'essai, et ce que le lecteur va découvrir au fil des pages.]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="extrait" class="section-padding bg-white">
+            <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="margin-bottom: var(--space-8);">Extrait</h2>
+                <div style="font-family: var(--font-heading); font-size: var(--text-lg); line-height: 2; color: rgba(32,37,43,0.8); font-style: italic; text-align: left; padding: 0 var(--space-8); border-left: 2px solid var(--color-secondary);">
+                    <p>« [Texte de l'extrait à fournir. Ceci est un espace réservé pour donner un aperçu du style d'écriture.] »</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- Footer standard -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Hod Fragonard</h2>
+                    <p>Juriste • Autrice • Entrepreneure</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="juriste.html">Juriste</a></li>
+                        <li><a href="autrice.html">Autrice</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Contact & Réseaux</h3>
+                    <ul style="margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.7);">[EMAIL À FOURNIR]</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hod Fragonard. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                </div>
+                <p>Site conçu par Jason_INFORMATIQUE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>

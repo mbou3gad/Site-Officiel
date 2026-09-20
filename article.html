@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Titre de l'Article] — Hod Fragonard</title>
+    <meta name="description" content="Lecture de l'article : [Titre de l'Article].">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Hod Fragonard</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="juriste.html">Juriste</a></li>
+                    <li><a href="autrice.html">Autrice</a></li>
+                    <li><a href="projets.html">Engagements</a></li>
+                    <li><a href="actualites.html" class="active">Actualités</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-gold">Me contacter</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Article Header -->
+        <section class="section-padding" style="padding-top: 150px; background-color: var(--color-white);">
+            <div class="container" style="max-width: 800px;">
+                <div class="breadcrumb" style="font-size: var(--text-sm); margin-bottom: var(--space-6); color: rgba(32,37,43,0.7);">
+                    <a href="index.html">Accueil</a> <span style="margin: 0 10px;">/</span> <a href="actualites.html">Actualités</a> <span style="margin: 0 10px;">/</span> [Catégorie]
+                </div>
+                
+                <h1 style="margin-bottom: var(--space-4); line-height: 1.2;">[Titre de l'Article]</h1>
+                
+                <div style="display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-8); color: rgba(32,37,43,0.7); font-size: var(--text-sm);">
+                    <span>[Date de publication]</span>
+                    <span>•</span>
+                    <span style="text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary); font-weight: 500;">[Catégorie]</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Principale -->
+        <section>
+            <div class="container">
+                <div style="height: 50vh; min-height: 300px; background-color: #e0d8c3; display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+                    [IMAGE DE COUVERTURE DE L'ARTICLE]
+                </div>
+            </div>
+        </section>
+
+        <!-- Contenu Article -->
+        <section class="section-padding bg-white">
+            <div class="container" style="max-width: 800px;">
+                <div style="font-size: var(--text-lg); line-height: 1.8; color: rgba(32,37,43,0.8);">
+                    <p style="margin-bottom: var(--space-6); font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-primary); line-height: 1.4;">
+                        [Chapeau introductif de l'article. Il résume brièvement le propos et accroche le lecteur.]
+                    </p>
+                    
+                    <p style="margin-bottom: var(--space-4);">
+                        [Contenu de l'article. Paragraphe 1. Ceci est un espace réservé pour le contenu réel qui sera fourni.]
+                    </p>
+                    
+                    <h2 style="font-size: var(--text-2xl); margin-top: var(--space-8); margin-bottom: var(--space-4);">[Sous-titre de l'article]</h2>
+                    
+                    <p style="margin-bottom: var(--space-4);">
+                        [Contenu de l'article. Paragraphe 2. Le texte est aéré pour faciliter la lecture sur tous les supports.]
+                    </p>
+                    
+                    <blockquote style="margin: var(--space-8) 0; padding: var(--space-6) var(--space-8); background-color: var(--color-background); border-left: 4px solid var(--color-secondary); font-family: var(--font-heading); font-size: var(--text-xl); font-style: italic; color: var(--color-primary);">
+                        « [Citation mise en avant dans le corps de l'article.] »
+                    </blockquote>
+                    
+                    <p style="margin-bottom: var(--space-4);">
+                        [Contenu de l'article. Paragraphe 3.]
+                    </p>
+                </div>
+                
+                <!-- Partage social -->
+                <div style="margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid rgba(11,31,51,0.1); display: flex; align-items: center; gap: var(--space-4);">
+                    <strong style="font-size: var(--text-sm); text-transform: uppercase; letter-spacing: 0.05em;">Partager :</strong>
+                    <a href="#" style="color: var(--color-secondary);">LinkedIn</a>
+                    <a href="#" style="color: var(--color-secondary);">Twitter</a>
+                    <a href="#" style="color: var(--color-secondary);">Facebook</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- Contenu identique au footer -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>Hod Fragonard</h2>
+                    <p>Juriste • Autrice • Entrepreneure</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="juriste.html">Juriste</a></li>
+                        <li><a href="autrice.html">Autrice</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Contact & Réseaux</h3>
+                    <ul style="margin-bottom: 1rem;">
+                        <li style="margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.7);">[EMAIL À FOURNIR]</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hod Fragonard. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                </div>
+                <p>Site conçu par Jason_INFORMATIQUE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
