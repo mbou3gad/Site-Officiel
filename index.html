@@ -1875,6 +1875,707 @@
 
     }
 
+
+    /* =====================================================
+       OPTIMISATION RESPONSIVE — AJOUT SÉCURISÉ
+       Aucun lien, bouton ou script n'est modifié.
+       Cette couche améliore uniquement l'affichage.
+    ====================================================== */
+
+    html {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    img,
+    svg,
+    video,
+    iframe {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(100% - 40px, 1200px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section,
+    .section-lg {
+      overflow: hidden;
+    }
+
+    /* ---------- HEADER / NAVIGATION ---------- */
+
+    .site-header {
+      width: 100%;
+    }
+
+    .header-inner {
+      min-width: 0;
+      gap: 20px;
+    }
+
+    .logo {
+      flex: 0 0 auto;
+      min-width: 0;
+    }
+
+    .nav-desktop {
+      min-width: 0;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      white-space: nowrap;
+    }
+
+    .hamburger {
+      flex: 0 0 auto;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .home-hero-modern {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .hero-grid {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .hero-content-modern {
+      box-sizing: border-box;
+    }
+
+    .hero-title-modern .word {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-roles-modern,
+    .hero-actions-modern,
+    .hero-contact-modern,
+    .hero-peace-line {
+      max-width: 100%;
+    }
+
+    .hero-actions-modern .btn {
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    /* ---------- GRILLES ---------- */
+
+    .home-pillars-modern,
+    .home-books-modern,
+    .home-about-modern,
+    .home-event-modern {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .home-pillar-modern,
+    .home-book-modern,
+    .home-book-body-modern,
+    .home-event-info {
+      min-width: 0;
+      box-sizing: border-box;
+    }
+
+    .home-pillar-modern p,
+    .home-book-body-modern h3,
+    .home-book-body-modern p,
+    .home-event-info h3,
+    .home-event-info p {
+      overflow-wrap: anywhere;
+    }
+
+    .home-book-cover-modern {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .home-book-cover-modern img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* ---------- IMAGE À PROPOS ---------- */
+
+    .home-about-photo,
+    .home-about-photo-inner {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .home-about-photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* ---------- CTA / CONTENU ---------- */
+
+    .home-cta-content-modern {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* =====================================================
+       GRANDES TABLETTES / PETITS LAPTOPS
+    ====================================================== */
+
+    @media (max-width: 1100px) {
+
+      .container {
+        width: min(100% - 36px, 1000px);
+      }
+
+      .header-inner {
+        gap: 14px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: .72rem;
+      }
+
+      .home-about-modern {
+        gap: 45px;
+      }
+
+      .home-event-modern {
+        grid-template-columns: 120px 1px minmax(0, 1fr) auto;
+        gap: 22px;
+      }
+
+    }
+
+    /* =====================================================
+       TABLETTES
+    ====================================================== */
+
+    @media (max-width: 900px) {
+
+      .container {
+        width: min(100% - 32px, 760px);
+      }
+
+      .nav-desktop {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .header-inner {
+        min-height: 74px;
+      }
+
+      .hero-grid {
+        padding-top: 110px;
+      }
+
+      .hero-content-modern {
+        max-width: 680px;
+      }
+
+      .hero-title-modern {
+        font-size: clamp(3rem, 10vw, 5rem);
+      }
+
+      .home-pillars-modern {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .home-books-modern {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .home-book-cover-modern {
+        height: 340px;
+      }
+
+      .home-book-cover-modern img {
+        max-height: 300px;
+      }
+
+      .home-about-modern {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 40px;
+      }
+
+      .home-about-photo {
+        width: min(100%, 620px);
+        margin: 0 auto;
+      }
+
+      .home-event-modern {
+        grid-template-columns: 100px 1px minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .home-event-actions {
+        grid-column: 1 / -1;
+        width: 100%;
+      }
+
+    }
+
+    /* =====================================================
+       MOBILES
+    ====================================================== */
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: calc(100% - 28px);
+        max-width: none;
+      }
+
+      .section,
+      .section-lg {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      /* Header */
+      .header-inner {
+        min-height: 68px;
+        gap: 10px;
+      }
+
+      .logo {
+        max-width: calc(100% - 55px);
+      }
+
+      .logo span {
+        white-space: nowrap;
+      }
+
+      .logo-tag {
+        white-space: nowrap;
+      }
+
+      .hamburger {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+      }
+
+      /* Menu mobile */
+      .mobile-nav,
+      .nav-mobile {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+      .nav-mobile-links {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .nav-mobile-links a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .nav-mobile > .btn {
+        width: calc(100% - 28px);
+        box-sizing: border-box;
+        justify-content: center;
+      }
+
+      /* Hero */
+      .home-hero-modern::before {
+        width: 420px;
+        height: 420px;
+        right: -250px;
+        top: -180px;
+      }
+
+      .home-hero-modern::after {
+        width: 280px;
+        height: 280px;
+        left: -170px;
+        bottom: -150px;
+      }
+
+      .hero-grid {
+        padding: 105px 0 48px;
+      }
+
+      .hero-content-modern {
+        width: 100%;
+        padding: 0;
+      }
+
+      .hero-title-modern {
+        font-size: clamp(2.45rem, 15vw, 4.2rem);
+        line-height: .92;
+      }
+
+      .hero-title-modern .word {
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
+      }
+
+      .hero-roles-modern {
+        font-size: .55rem;
+        letter-spacing: .06em;
+        line-height: 1.8;
+      }
+
+      .hero-quote-modern {
+        font-size: clamp(1rem, 5vw, 1.25rem);
+        line-height: 1.45;
+      }
+
+      .hero-desc-modern {
+        font-size: .82rem;
+        line-height: 1.7;
+      }
+
+      .hero-actions-modern {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions-modern .btn {
+        width: 100%;
+        min-height: 48px;
+        padding-left: 16px;
+        padding-right: 16px;
+        justify-content: center;
+      }
+
+      .hero-contact-modern .btn {
+        justify-content: center;
+      }
+
+      .hero-peace-line {
+        width: 100%;
+        gap: 8px;
+      }
+
+      .hero-peace-line::before,
+      .hero-peace-line::after {
+        flex: 1 1 20px;
+        width: auto;
+        max-width: 35px;
+      }
+
+      .hero-peace-content {
+        min-width: 0;
+        text-align: center;
+      }
+
+      .hero-peace-title,
+      .hero-peace-sub {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      /* Piliers */
+      .home-pillars-modern {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .home-pillar-modern {
+        min-height: 0;
+        padding: 25px 21px 23px;
+      }
+
+      .home-pillar-modern h3 {
+        font-size: 1.25rem;
+      }
+
+      .home-pillar-modern p {
+        font-size: .86rem;
+      }
+
+      /* À propos */
+      .home-about-modern {
+        gap: 30px;
+      }
+
+      .home-about-photo {
+        padding: 11px;
+      }
+
+      .home-about-content h2 {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+      }
+
+      /* Livres */
+      .home-books-modern {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .home-book-cover-modern {
+        height: min(420px, 92vw);
+        padding: 18px;
+      }
+
+      .home-book-cover-modern img {
+        max-height: calc(min(420px, 92vw) - 36px);
+      }
+
+      .home-book-body-modern {
+        min-height: 0;
+        padding: 20px;
+      }
+
+      .home-book-body-modern h3 {
+        font-size: 1.08rem;
+      }
+
+      /* Agenda */
+      .home-event-modern {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 17px;
+        padding: 24px 18px;
+        text-align: center;
+      }
+
+      .home-event-date {
+        width: 100%;
+      }
+
+      .home-event-day {
+        font-size: 2.6rem;
+      }
+
+      .home-event-sep {
+        width: 55px;
+        height: 1px;
+        margin: 0 auto;
+      }
+
+      .home-event-info h3 {
+        font-size: 1.15rem;
+      }
+
+      .home-event-info p {
+        font-size: .84rem;
+      }
+
+      .home-event-actions,
+      .home-event-actions .btn {
+        width: 100%;
+      }
+
+      .home-event-actions .btn {
+        justify-content: center;
+      }
+
+      /* Actualités */
+      .home-empty-modern {
+        min-height: 230px;
+        padding: 28px 18px;
+      }
+
+      /* CTA */
+      .home-cta-content-modern {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .home-cta-content-modern h2 {
+        font-size: clamp(1.75rem, 8vw, 2.3rem);
+        line-height: 1.15;
+      }
+
+      .home-cta-content-modern .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Footer */
+      .site-footer {
+        overflow: hidden;
+      }
+
+    }
+
+    /* =====================================================
+       PETITS TÉLÉPHONES — 480px
+    ====================================================== */
+
+    @media (max-width: 480px) {
+
+      .container {
+        width: calc(100% - 24px);
+      }
+
+      .header-inner {
+        min-height: 64px;
+      }
+
+      .logo {
+        transform: scale(.94);
+        transform-origin: left center;
+      }
+
+      .hero-grid {
+        padding-top: 96px;
+        padding-bottom: 42px;
+      }
+
+      .hero-content-modern::before {
+        font-size: .48rem;
+        letter-spacing: .15em;
+        margin-bottom: 16px;
+      }
+
+      .hero-title-modern {
+        font-size: clamp(2.25rem, 16vw, 3.6rem);
+      }
+
+      .hero-roles-modern {
+        gap: 3px 6px;
+        font-size: .49rem;
+      }
+
+      .hero-quote-modern {
+        font-size: .98rem;
+      }
+
+      .hero-desc-modern {
+        font-size: .78rem;
+      }
+
+      .hero-peace-title {
+        font-size: .45rem;
+        letter-spacing: .08em;
+      }
+
+      .hero-peace-sub {
+        font-size: .38rem;
+        letter-spacing: .04em;
+      }
+
+      .home-pillar-modern {
+        padding: 22px 18px;
+      }
+
+      .home-book-cover-modern {
+        height: 88vw;
+        max-height: 390px;
+      }
+
+      .home-book-cover-modern img {
+        max-height: calc(88vw - 32px);
+      }
+
+    }
+
+    /* =====================================================
+       TRÈS PETITS TÉLÉPHONES — 360px
+    ====================================================== */
+
+    @media (max-width: 360px) {
+
+      .container {
+        width: calc(100% - 20px);
+      }
+
+      .hero-title-modern {
+        font-size: 2.15rem;
+      }
+
+      .hero-roles-modern {
+        font-size: .45rem;
+      }
+
+      .hero-quote-modern {
+        font-size: .92rem;
+      }
+
+      .hero-desc-modern {
+        font-size: .75rem;
+      }
+
+      .hero-actions-modern .btn {
+        font-size: .72rem;
+      }
+
+      .hero-peace-line {
+        gap: 5px;
+      }
+
+      .home-book-cover-modern {
+        height: 86vw;
+      }
+
+    }
+
+    /* =====================================================
+       ACCESSIBILITÉ / TOUCH
+    ====================================================== */
+
+    @media (hover: none) and (pointer: coarse) {
+
+      .home-pillar-modern:hover,
+      .home-book-modern:hover {
+        transform: none;
+      }
+
+      .home-about-photo:hover img,
+      .home-book-modern:hover .home-book-cover-modern img {
+        transform: none;
+      }
+
+      a,
+      button {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+    }
+
+    /* Empêche les longues chaînes de casser la page */
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    span {
+      overflow-wrap: anywhere;
+    }
+
+
   </style>
 
 
