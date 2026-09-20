@@ -1087,6 +1087,737 @@
 
     }
 
+    /* =========================================================
+   HOD FRAGONARD — OPTIMISATION MOBILE PREMIUM
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------------------------------------------------------
+     BASE
+     --------------------------------------------------------- */
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    width: min(100% - 30px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section,
+  .section-lg {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+
+  /* ---------------------------------------------------------
+     HEADER MOBILE
+     --------------------------------------------------------- */
+
+  .site-header {
+    top: 10px;
+    left: 12px;
+    right: 12px;
+    height: auto;
+    padding: 0;
+    z-index: 1000;
+  }
+
+  .site-header .header-inner,
+  .site-header .container {
+    width: 100%;
+    min-height: 62px;
+
+    padding: 0 10px 0 17px;
+
+    border-radius: 16px;
+
+    background: rgba(11, 31, 51, 0.94);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+      0 12px 35px rgba(0,0,0,.22);
+  }
+
+  .site-header .logo {
+    font-size: .91rem;
+    line-height: 1;
+    letter-spacing: .10em;
+  }
+
+  .site-header .logo span {
+    display: inline;
+  }
+
+  .site-header .logo .logo-tag {
+    display: block;
+    position: absolute;
+
+    left: 0;
+    bottom: -13px;
+
+    font-size: .38rem;
+    letter-spacing: .16em;
+  }
+
+  /* Bouton hamburger */
+
+  .site-header .hamburger {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    border: 1px solid rgba(201,164,92,.30);
+
+    background: rgba(255,255,255,.055);
+  }
+
+  .site-header .hamburger span {
+    width: 19px;
+    height: 1px;
+    background: #fff;
+  }
+
+
+  /* ---------------------------------------------------------
+     MENU MOBILE
+     --------------------------------------------------------- */
+
+  .nav-mobile {
+    width: min(88vw, 370px);
+
+    padding:
+      105px 28px 35px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(11,31,51,.99),
+        rgba(5,18,31,.99)
+      );
+
+    box-shadow:
+      -20px 0 70px rgba(0,0,0,.30);
+
+    overflow-y: auto;
+  }
+
+  .nav-mobile .nav-mobile-tagline {
+    display: block;
+    margin-bottom: 25px;
+
+    font-size: .60rem;
+    letter-spacing: .18em;
+    color: #C9A45C;
+  }
+
+  .nav-mobile .nav-mobile-links {
+    gap: 2px;
+  }
+
+  .nav-mobile .nav-mobile-links li {
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+
+  .nav-mobile .nav-mobile-links a {
+    padding: 12px 0;
+
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  .nav-mobile > .btn {
+    width: 100%;
+    margin-top: 28px;
+    justify-content: center;
+  }
+
+
+  /* ---------------------------------------------------------
+     HERO MOBILE
+     --------------------------------------------------------- */
+
+  .home-hero-modern {
+    min-height: auto;
+    padding-top: 125px;
+    padding-bottom: 55px;
+  }
+
+  .home-hero-modern .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-content-modern {
+    width: 100%;
+    order: 1;
+  }
+
+  .hero-image-modern {
+    order: 2;
+  }
+
+  .hero-title-modern {
+    font-size: clamp(3.1rem, 17vw, 5rem);
+    line-height: .84;
+    letter-spacing: -.055em;
+  }
+
+  .hero-title-modern .word {
+    display: block;
+  }
+
+  .hero-roles-modern {
+    margin-top: 25px;
+
+    font-size: .60rem;
+    line-height: 2;
+
+    letter-spacing: .095em;
+  }
+
+  .hero-roles-modern .sep {
+    margin: 0 2px;
+  }
+
+  .hero-quote-modern {
+    margin-top: 22px;
+
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+
+  .hero-desc-modern {
+    margin-top: 16px;
+
+    font-size: .88rem;
+    line-height: 1.7;
+
+    color: rgba(255,255,255,.68);
+  }
+
+
+  /* ---------------------------------------------------------
+     BOUTONS HERO
+     --------------------------------------------------------- */
+
+  .hero-actions-modern {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 27px;
+  }
+
+  .hero-actions-modern .btn {
+    width: 100%;
+    min-height: 52px;
+
+    justify-content: center;
+
+    padding-left: 16px;
+    padding-right: 16px;
+
+    font-size: .68rem;
+    letter-spacing: .08em;
+  }
+
+  .hero-contact-modern {
+    margin-top: 15px;
+  }
+
+  .hero-contact-modern .btn {
+    font-size: .70rem;
+  }
+
+
+  /* ---------------------------------------------------------
+     PHOTO HERO
+     --------------------------------------------------------- */
+
+  .hero-image-modern {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-top: 38px;
+    padding: 0 5px;
+  }
+
+  .hero-photo-modern {
+    width: 100%;
+    max-width: 380px;
+
+    padding: 10px;
+
+    margin: 0 auto;
+  }
+
+  .hero-photo-inner-modern {
+    width: 100%;
+  }
+
+  .hero-photo-inner-modern img {
+    width: 100%;
+    height: auto;
+
+    max-height: 520px;
+
+    object-fit: cover;
+  }
+
+  .hero-badge-modern {
+    right: 0;
+    bottom: 20px;
+
+    padding: 13px 15px;
+
+    max-width: 190px;
+  }
+
+  .hero-badge-modern-title {
+    font-size: .58rem;
+    letter-spacing: .10em;
+  }
+
+  .hero-badge-modern-sub {
+    font-size: .55rem;
+    line-height: 1.4;
+  }
+
+
+  /* ---------------------------------------------------------
+     PILIERS
+     --------------------------------------------------------- */
+
+  .home-pillars-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .section-header.center {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .section-header.center h2 {
+    font-size: 1.85rem;
+    line-height: 1.15;
+  }
+
+  .section-header.center p {
+    font-size: .88rem;
+    line-height: 1.7;
+  }
+
+  .home-pillars-modern {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-top: 30px;
+  }
+
+  .home-pillar-modern {
+    min-height: auto;
+
+    padding: 26px 23px 24px;
+
+    border-radius: 3px;
+  }
+
+  .home-pillar-icon-modern {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 18px;
+  }
+
+  .home-pillar-sub {
+    font-size: .60rem;
+  }
+
+  .home-pillar-modern h3 {
+    font-size: 1.30rem;
+    margin-bottom: 10px;
+  }
+
+  .home-pillar-modern p {
+    font-size: .86rem;
+    line-height: 1.65;
+
+    margin-bottom: 20px;
+  }
+
+  .home-pillar-link {
+    font-size: .74rem;
+  }
+
+
+  /* ---------------------------------------------------------
+     À PROPOS
+     --------------------------------------------------------- */
+
+  .home-about-modern {
+    display: flex;
+    flex-direction: column;
+
+    gap: 38px;
+  }
+
+  .home-about-photo {
+    width: 100%;
+    max-width: 390px;
+
+    margin: 0 auto;
+
+    padding: 12px;
+  }
+
+  .home-about-content {
+    width: 100%;
+  }
+
+  .home-about-content h2 {
+    font-size: 2rem;
+    line-height: 1.12;
+  }
+
+  .home-about-content p {
+    font-size: .89rem;
+    line-height: 1.75;
+  }
+
+  .home-about-content .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  /* ---------------------------------------------------------
+     OUVRAGES
+     --------------------------------------------------------- */
+
+  .home-books-modern {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .home-book-modern {
+    width: 100%;
+  }
+
+  .home-book-cover-modern {
+    height: 360px;
+
+    padding: 18px;
+  }
+
+  .home-book-cover-modern img {
+    max-height: 320px;
+  }
+
+  .home-book-body-modern {
+    padding: 20px;
+  }
+
+  .home-book-body-modern h3 {
+    font-size: 1.15rem;
+  }
+
+  .home-book-body-modern p {
+    font-size: .86rem;
+  }
+
+  .home-book-btn {
+    min-height: 46px;
+  }
+
+
+  /* ---------------------------------------------------------
+     AGENDA
+     --------------------------------------------------------- */
+
+  .home-event-modern {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 25px 20px;
+
+    text-align: center;
+  }
+
+  .home-event-date {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 7px;
+
+    flex-wrap: wrap;
+  }
+
+  .home-event-day {
+    font-size: 2.8rem;
+  }
+
+  .home-event-range {
+    font-size: .70rem;
+  }
+
+  .home-event-month {
+    width: 100%;
+
+    margin-top: -3px;
+  }
+
+  .home-event-sep {
+    width: 55px;
+    height: 1px;
+
+    margin: 0 auto;
+  }
+
+  .home-event-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .home-event-info p {
+    font-size: .86rem;
+    line-height: 1.65;
+  }
+
+  .home-event-actions {
+    width: 100%;
+  }
+
+  .home-event-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  /* ---------------------------------------------------------
+     ACTUALITÉS
+     --------------------------------------------------------- */
+
+  .home-empty-modern {
+    min-height: 230px;
+
+    padding: 30px 20px;
+  }
+
+  .home-empty-modern h3 {
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  .home-empty-modern p {
+    font-size: .85rem;
+    line-height: 1.6;
+  }
+
+
+  /* ---------------------------------------------------------
+     CTA
+     --------------------------------------------------------- */
+
+  .home-cta-modern {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .home-cta-content-modern h2 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .home-cta-content-modern p {
+    font-size: .88rem;
+    line-height: 1.7;
+  }
+
+  .home-cta-content-modern .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  /* ---------------------------------------------------------
+     FOOTER
+     --------------------------------------------------------- */
+
+  .site-footer {
+    text-align: center;
+  }
+
+  .footer-brand p {
+    font-size: .85rem;
+    line-height: 1.6;
+  }
+
+  .footer-soc {
+    justify-content: center;
+  }
+
+  .footer-col {
+    margin-top: 30px;
+  }
+
+  .footer-col ul {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    text-align: center;
+
+    font-size: .72rem;
+  }
+
+  .footer-legal {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  /* ---------------------------------------------------------
+     WHATSAPP
+     --------------------------------------------------------- */
+
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+
+    right: 15px;
+    bottom: 15px;
+
+    z-index: 950;
+  }
+
+  .whatsapp-float svg {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  /* ---------------------------------------------------------
+     RETOUR HAUT
+     --------------------------------------------------------- */
+
+  .back-top {
+    width: 42px;
+    height: 42px;
+
+    right: 15px;
+    bottom: 78px;
+  }
+}
+
+
+/* =========================================================
+   PETITS TÉLÉPHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .site-header {
+    left: 8px;
+    right: 8px;
+  }
+
+  .site-header .header-inner {
+    min-height: 58px;
+    padding-left: 14px;
+  }
+
+  .site-header .logo {
+    font-size: .82rem;
+  }
+
+  .site-header .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-hero-modern {
+    padding-top: 115px;
+  }
+
+  .hero-title-modern {
+    font-size: 3rem;
+  }
+
+  .hero-roles-modern {
+    font-size: .55rem;
+  }
+
+  .hero-quote-modern {
+    font-size: .98rem;
+  }
+
+  .hero-desc-modern {
+    font-size: .83rem;
+  }
+
+  .hero-badge-modern {
+    padding: 11px 12px;
+    max-width: 165px;
+  }
+
+  .hero-badge-modern-title {
+    font-size: .52rem;
+  }
+
+  .hero-badge-modern-sub {
+    font-size: .48rem;
+  }
+
+  .home-book-cover-modern {
+    height: 330px;
+  }
+
+  .home-book-cover-modern img {
+    max-height: 295px;
+  }
+}
   </style>
 
 
